@@ -45,17 +45,6 @@ pipeline {
             }
         }
 
-        stage('Code Coverage') {
-            steps {
-                script {
-                    if (isUnix()) {
-                        sh 'mvn jacoco:report'
-                    } else {
-                        bat 'mvn jacoco:report'
-                    }
-                }
-            }
-        }
 
         stage('Publish Test Results') {
             steps {
@@ -63,11 +52,6 @@ pipeline {
             }
         }
 
-        stage('Publish Coverage Report') {
-            steps {
-                jacoco()
-            }
-        }
 
         stage('Build Docker Image') {
             steps {
