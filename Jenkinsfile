@@ -10,7 +10,7 @@ pipeline {
             // Define Docker Hub credentials ID
         DOCKERHUB_CREDENTIALS_ID = 'Docker_Hub'
 
-        DOCKER_IMAGE = 'amirdirin/travelcalculator'
+        DOCKER_IMAGE = 'amirdirin/travelcalculator2'
         DOCKER_TAG = 'latest'
     }
 
