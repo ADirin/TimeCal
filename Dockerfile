@@ -15,8 +15,8 @@ RUN mkdir -p /javafx-sdk \
     && rm -rf /javafx-sdk/javafx-sdk-21.0.2 javafx.zip
 
 # Copy your fat JAR
-COPY target/untitled-1.0-SNAPSHOT-shaded.jar app.jar
-
+# COPY target/untitled-1.0-SNAPSHOT-shaded.jar app.jar
+COPY target/*.jar app.jar
 # Set X11 display (Windows host with Xming/X11)
 ENV DISPLAY=host.docker.internal:0.0
 
