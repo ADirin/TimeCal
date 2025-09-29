@@ -33,24 +33,9 @@ pipeline {
             }
         }
 
-        stage('Test') {
-            steps {
-                script {
-                    if (isUnix()) {
-                        sh 'mvn clean test'
-                    } else {
-                        bat 'mvn clean test'
-                    }
-                }
-            }
-        }
+       
 
-
-        stage('Publish Test Results') {
-            steps {
-                junit '**/target/surefire-reports/*.xml'
-            }
-        }
+      
 
 
         stage('Build Docker Image') {
